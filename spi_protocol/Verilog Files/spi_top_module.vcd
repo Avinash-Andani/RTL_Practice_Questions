@@ -1,0 +1,1314 @@
+$date
+	Thu Aug 20 15:23:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_spi_top_module $end
+$var wire 1 ! slave_rx_done $end
+$var wire 8 " slave_data_out [7:0] $end
+$var wire 1 # sclk_line $end
+$var wire 1 $ mosi_line $end
+$var wire 1 % miso_line $end
+$var wire 1 & master_tx_done $end
+$var wire 1 ' cs_line $end
+$var reg 1 ( CPHA $end
+$var reg 1 ) CPOL $end
+$var reg 1 * clk $end
+$var reg 8 + master_data_in [7:0] $end
+$var reg 1 , rst $end
+$var reg 8 - slave_data_in [7:0] $end
+$var reg 1 . start $end
+$scope module DUT $end
+$var wire 1 ( CPHA $end
+$var wire 1 ) CPOL $end
+$var wire 1 * clk $end
+$var wire 8 / master_data_in [7:0] $end
+$var wire 1 , rst $end
+$var wire 8 0 slave_data_in [7:0] $end
+$var wire 1 . start $end
+$var wire 1 ! slave_rx_done $end
+$var wire 8 1 slave_data_out [7:0] $end
+$var wire 1 # sclk_line $end
+$var wire 1 $ mosi_line $end
+$var wire 1 % miso_line $end
+$var wire 1 & master_tx_done $end
+$var wire 8 2 master_data_out [7:0] $end
+$var wire 1 ' cs_line $end
+$scope module spi_master $end
+$var wire 1 ( CPHA $end
+$var wire 1 ) CPOL $end
+$var wire 1 * clk $end
+$var wire 8 3 data_in [7:0] $end
+$var wire 1 , rst $end
+$var wire 1 . start $end
+$var wire 1 4 shift_en $end
+$var wire 1 # sclk $end
+$var wire 1 5 sample_en $end
+$var wire 1 $ mosi $end
+$var wire 1 % miso $end
+$var wire 1 6 load_en $end
+$var wire 1 & done_flag $end
+$var wire 8 7 data_out [7:0] $end
+$var wire 1 ' cs_n $end
+$scope module Controller_Inst $end
+$var wire 1 ( CPHA $end
+$var wire 1 ) CPOL $end
+$var wire 1 * clk $end
+$var wire 1 8 even_edge $end
+$var wire 1 , rst $end
+$var wire 1 # sclk_out $end
+$var wire 1 . start $end
+$var wire 1 9 odd_edge $end
+$var parameter 2 : DONE $end
+$var parameter 2 ; IDLE $end
+$var parameter 2 < START $end
+$var parameter 2 = TRANSFER $end
+$var reg 4 > baud_counter [3:0] $end
+$var reg 1 ' cs_n $end
+$var reg 1 & done_flag $end
+$var reg 4 ? edge_count [3:0] $end
+$var reg 1 @ internal_sclk $end
+$var reg 1 6 load_en $end
+$var reg 2 A next_state [1:0] $end
+$var reg 1 5 sample_en $end
+$var reg 1 B sclk_tick $end
+$var reg 1 4 shift_en $end
+$var reg 2 C state [1:0] $end
+$upscope $end
+$scope module Datapath_Inst $end
+$var wire 1 * clk $end
+$var wire 1 6 ld_data $end
+$var wire 1 , rst $end
+$var wire 1 5 sample_data $end
+$var wire 1 4 sft_data $end
+$var wire 8 D tx_data_in [7:0] $end
+$var wire 1 $ serial_out $end
+$var wire 1 % serial_in $end
+$var reg 8 E rx_data_out [7:0] $end
+$var reg 8 F rx_reg [7:0] $end
+$var reg 8 G tx_reg [7:0] $end
+$upscope $end
+$upscope $end
+$scope module spi_slave $end
+$var wire 1 ( CPHA $end
+$var wire 1 ) CPOL $end
+$var wire 1 ' CS $end
+$var wire 1 $ MOSI $end
+$var wire 1 # SCLK $end
+$var wire 1 * clk $end
+$var wire 1 , rst $end
+$var wire 8 H tx_data [7:0] $end
+$var wire 1 I serial_out_wire $end
+$var wire 1 J safe_MOSI $end
+$var wire 1 K safe_CS_internal $end
+$var wire 1 ! rx_done $end
+$var wire 8 L rx_data [7:0] $end
+$var wire 1 M internal_smp $end
+$var wire 1 N internal_sft $end
+$var wire 1 O internal_ld $end
+$var wire 1 % MISO $end
+$var reg 2 P mosi_sync [1:0] $end
+$scope module Controller_Inst $end
+$var wire 1 ( CPHA $end
+$var wire 1 ) CPOL $end
+$var wire 1 ' CS_pin $end
+$var wire 1 # SCLK_pin $end
+$var wire 1 * clk $end
+$var wire 1 Q cs_falling_edge $end
+$var wire 1 , rst $end
+$var wire 1 R rule_A $end
+$var wire 1 K safe_CS_out $end
+$var wire 1 S sclk_falling $end
+$var wire 1 T sclk_rising $end
+$var wire 1 U safe_sclk $end
+$var wire 1 V safe_CS $end
+$var wire 1 W do_shift $end
+$var wire 1 X do_sample $end
+$var parameter 2 Y DONE $end
+$var parameter 2 Z IDLE $end
+$var parameter 2 [ START $end
+$var parameter 2 \ TRANSFER $end
+$var reg 1 ! Done $end
+$var reg 4 ] bit_counter [3:0] $end
+$var reg 2 ^ cs_sync [1:0] $end
+$var reg 1 O ld_data $end
+$var reg 2 _ next_state [1:0] $end
+$var reg 1 ` prev_cs $end
+$var reg 1 a prev_sclk $end
+$var reg 1 M sample_data $end
+$var reg 2 b sclk_sync [1:0] $end
+$var reg 1 N sft_data $end
+$var reg 2 c state [1:0] $end
+$upscope $end
+$scope module Datapath_Inst $end
+$var wire 1 * clk $end
+$var wire 1 O ld_data $end
+$var wire 1 , rst $end
+$var wire 1 M sample_data $end
+$var wire 1 J serial_in $end
+$var wire 1 N sft_data $end
+$var wire 8 d tx_data_in [7:0] $end
+$var wire 1 I serial_out $end
+$var reg 8 e rx_data_out [7:0] $end
+$var reg 8 f rx_reg [7:0] $end
+$var reg 8 g tx_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 \
+b1 [
+b0 Z
+b11 Y
+b10 =
+b1 <
+b0 ;
+b11 :
+$end
+#0
+$dumpvars
+bx g
+bx f
+bx e
+b1011 d
+bx c
+bx b
+xa
+x`
+bx _
+bx ^
+bx ]
+xX
+xW
+xV
+xU
+xT
+xS
+1R
+xQ
+bx P
+xO
+xN
+xM
+bx L
+xK
+xJ
+xI
+b1011 H
+bx G
+bx F
+bx E
+b1010 D
+bx C
+xB
+bx A
+x@
+bx ?
+bx >
+x9
+x8
+bx 7
+x6
+x5
+x4
+b1010 3
+bx 2
+bx 1
+b1011 0
+b1010 /
+x.
+b1011 -
+0,
+b1010 +
+0*
+0)
+0(
+x'
+x&
+x%
+x$
+x#
+bx "
+x!
+$end
+#5
+0B
+0&
+05
+04
+06
+0!
+0M
+0N
+0O
+1*
+#10
+0*
+#15
+0X
+0Q
+z%
+0W
+0T
+18
+0J
+b0 _
+0S
+0U
+1K
+1V
+0I
+b0 A
+09
+0$
+b0 P
+b0 ]
+b0 c
+0a
+1`
+b0 b
+b11 ^
+b0 "
+b0 1
+b0 L
+b0 e
+b0 f
+b0 g
+1'
+b0 C
+0#
+0@
+b0 ?
+b0 >
+b0 2
+b0 7
+b0 E
+b0 F
+b0 G
+1*
+1,
+#20
+0*
+#25
+1*
+0,
+#30
+0*
+#35
+b1 C
+b10 A
+1*
+1.
+#40
+0*
+#45
+b1 >
+16
+0'
+b10 C
+b10 A
+1*
+0.
+#50
+0*
+#55
+b10 ^
+06
+b10 >
+b1010 G
+1*
+#60
+0*
+#65
+b1 _
+1Q
+0%
+0K
+0V
+b11 >
+b0 ^
+1*
+#70
+0*
+#75
+b10 _
+0Q
+b1 c
+0`
+b100 >
+1*
+#80
+0*
+#85
+b101 >
+1O
+b10 c
+1*
+#90
+0*
+#95
+0O
+b1011 g
+1B
+b0 >
+1*
+#100
+0*
+#105
+08
+19
+0B
+b1 >
+b1 ?
+1#
+1@
+15
+1*
+#110
+0*
+#115
+b1 b
+05
+b10 >
+1*
+#120
+0*
+#125
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#130
+0*
+#135
+0X
+0T
+b1 ]
+1M
+1a
+b100 >
+1*
+#140
+0*
+#145
+b101 >
+0M
+1*
+#150
+0*
+#155
+1B
+b0 >
+1*
+#160
+0*
+#165
+18
+09
+0B
+b1 >
+b10 ?
+0#
+0@
+14
+1*
+#170
+0*
+#175
+b10 b
+04
+b10 >
+b10100 G
+1*
+#180
+0*
+#185
+1W
+1S
+0U
+b11 >
+b0 b
+1*
+#190
+0*
+#195
+0W
+0S
+1N
+0a
+b100 >
+1*
+#200
+0*
+#205
+b101 >
+b10110 g
+0N
+1*
+#210
+0*
+#215
+1B
+b0 >
+1*
+#220
+0*
+#225
+08
+19
+0B
+b1 >
+b11 ?
+1#
+1@
+15
+1*
+#230
+0*
+#235
+b1 b
+05
+b10 >
+1*
+#240
+0*
+#245
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#250
+0*
+#255
+0X
+0T
+b10 ]
+1M
+1a
+b100 >
+1*
+#260
+0*
+#265
+b101 >
+0M
+1*
+#270
+0*
+#275
+1B
+b0 >
+1*
+#280
+0*
+#285
+18
+09
+0B
+b1 >
+b100 ?
+0#
+0@
+14
+1*
+#290
+0*
+#295
+b10 b
+04
+b10 >
+b101000 G
+1*
+#300
+0*
+#305
+1W
+1S
+0U
+b11 >
+b0 b
+1*
+#310
+0*
+#315
+0W
+0S
+1N
+0a
+b100 >
+1*
+#320
+0*
+#325
+b101 >
+b101100 g
+0N
+1*
+#330
+0*
+#335
+1B
+b0 >
+1*
+#340
+0*
+#345
+08
+19
+0B
+b1 >
+b101 ?
+1#
+1@
+15
+1*
+#350
+0*
+#355
+b1 b
+05
+b10 >
+1*
+#360
+0*
+#365
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#370
+0*
+#375
+0X
+0T
+b11 ]
+1M
+1a
+b100 >
+1*
+#380
+0*
+#385
+b101 >
+0M
+1*
+#390
+0*
+#395
+1B
+b0 >
+1*
+#400
+0*
+#405
+18
+09
+0B
+b1 >
+b110 ?
+0#
+0@
+14
+1*
+#410
+0*
+#415
+b10 b
+04
+b10 >
+b1010000 G
+1*
+#420
+0*
+#425
+1W
+1S
+0U
+b11 >
+b0 b
+1*
+#430
+0*
+#435
+0W
+0S
+1N
+0a
+b100 >
+1*
+#440
+0*
+#445
+b101 >
+b1011000 g
+0N
+1*
+#450
+0*
+#455
+1B
+b0 >
+1*
+#460
+0*
+#465
+08
+19
+0B
+b1 >
+b111 ?
+1#
+1@
+15
+1*
+#470
+0*
+#475
+b1 b
+05
+b10 >
+1*
+#480
+0*
+#485
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#490
+0*
+#495
+0X
+0T
+b100 ]
+1M
+1a
+b100 >
+1*
+#500
+0*
+#505
+b101 >
+0M
+1*
+#510
+0*
+#515
+1B
+b0 >
+1*
+#520
+0*
+#525
+18
+09
+0B
+b1 >
+b1000 ?
+0#
+0@
+14
+1*
+#530
+0*
+#535
+1$
+b10 b
+04
+b10 >
+b10100000 G
+1*
+#540
+0*
+#545
+1W
+1S
+0U
+b11 >
+b0 b
+b1 P
+1*
+#550
+0*
+#555
+0W
+1J
+0S
+b11 P
+1N
+0a
+b100 >
+1*
+#560
+0*
+#565
+1%
+1I
+b101 >
+b10110000 g
+0N
+1*
+#570
+0*
+#575
+1B
+b0 >
+1*
+#580
+0*
+#585
+08
+19
+0B
+b1 >
+b1001 ?
+1#
+1@
+15
+1*
+#590
+0*
+#595
+b1 b
+05
+b10 >
+b1 2
+b1 7
+b1 E
+b1 F
+1*
+#600
+0*
+#605
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#610
+0*
+#615
+0X
+0T
+b101 ]
+1M
+1a
+b100 >
+1*
+#620
+0*
+#625
+b101 >
+b1 "
+b1 1
+b1 L
+b1 e
+b1 f
+0M
+1*
+#630
+0*
+#635
+1B
+b0 >
+1*
+#640
+0*
+#645
+18
+09
+0B
+b1 >
+b1010 ?
+0#
+0@
+14
+1*
+#650
+0*
+#655
+0$
+b10 b
+04
+b10 >
+b1000000 G
+1*
+#660
+0*
+#665
+1W
+1S
+0U
+b11 >
+b0 b
+b10 P
+1*
+#670
+0*
+#675
+0W
+0J
+0S
+b0 P
+1N
+0a
+b100 >
+1*
+#680
+0*
+#685
+0%
+0I
+b101 >
+b1100000 g
+0N
+1*
+#690
+0*
+#695
+1B
+b0 >
+1*
+#700
+0*
+#705
+08
+19
+0B
+b1 >
+b1011 ?
+1#
+1@
+15
+1*
+#710
+0*
+#715
+b1 b
+05
+b10 >
+b10 2
+b10 7
+b10 E
+b10 F
+1*
+#720
+0*
+#725
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#730
+0*
+#735
+0X
+0T
+b110 ]
+1M
+1a
+b100 >
+1*
+#740
+0*
+#745
+b101 >
+b10 "
+b10 1
+b10 L
+b10 e
+b10 f
+0M
+1*
+#750
+0*
+#755
+1B
+b0 >
+1*
+#760
+0*
+#765
+18
+09
+0B
+b1 >
+b1100 ?
+0#
+0@
+14
+1*
+#770
+0*
+#775
+1$
+b10 b
+04
+b10 >
+b10000000 G
+1*
+#780
+0*
+#785
+1W
+1S
+0U
+b11 >
+b0 b
+b1 P
+1*
+#790
+0*
+#795
+0W
+1J
+0S
+b11 P
+1N
+0a
+b100 >
+1*
+#800
+0*
+#805
+1%
+1I
+b101 >
+b11000000 g
+0N
+1*
+#810
+0*
+#815
+1B
+b0 >
+1*
+#820
+0*
+#825
+08
+19
+0B
+b1 >
+b1101 ?
+1#
+1@
+15
+1*
+#830
+0*
+#835
+b1 b
+05
+b10 >
+b101 2
+b101 7
+b101 E
+b101 F
+1*
+#840
+0*
+#845
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#850
+0*
+#855
+0X
+0T
+b111 ]
+1M
+1a
+b100 >
+1*
+#860
+0*
+#865
+b101 >
+b101 "
+b101 1
+b101 L
+b101 e
+b101 f
+0M
+1*
+#870
+0*
+#875
+1B
+b0 >
+1*
+#880
+0*
+#885
+18
+09
+0B
+b1 >
+b1110 ?
+0#
+0@
+14
+1*
+#890
+0*
+#895
+0$
+b10 b
+04
+b10 >
+b0 G
+1*
+#900
+0*
+#905
+1W
+1S
+0U
+b11 >
+b0 b
+b10 P
+1*
+#910
+0*
+#915
+0W
+0J
+0S
+b0 P
+1N
+0a
+b100 >
+1*
+#920
+0*
+#925
+b101 >
+b10000000 g
+0N
+1*
+#930
+0*
+#935
+1B
+b0 >
+1*
+#940
+0*
+#945
+08
+19
+0B
+b1 >
+b1111 ?
+1#
+1@
+15
+1*
+#950
+0*
+#955
+b1 b
+05
+b10 >
+b1011 2
+b1011 7
+b1011 E
+b1011 F
+1*
+#960
+0*
+#965
+1X
+1T
+1U
+b11 >
+b11 b
+1*
+#970
+0*
+#975
+0X
+0T
+b11 _
+b1000 ]
+1M
+1a
+b100 >
+1*
+#980
+0*
+#985
+b0 _
+b101 >
+b1010 "
+b1010 1
+b1010 L
+b1010 e
+b1010 f
+0M
+b11 c
+1*
+#990
+0*
+#995
+b11 A
+1!
+b0 c
+1B
+b0 >
+1*
+#1000
+0*
+#1005
+18
+09
+b0 A
+0B
+b1 >
+b0 ?
+0#
+0@
+14
+b11 C
+b0 ]
+0!
+1*
+#1010
+0*
+#1015
+b10 b
+1&
+1'
+04
+b0 C
+b0 >
+1*
+#1020
+0*
+#1025
+1W
+1S
+0U
+0&
+b0 b
+b1 ^
+1*
+#1030
+0*
+#1035
+z%
+0W
+0S
+1K
+1V
+0a
+b11 ^
+1*
+#1040
+0*
+#1045
+1`
+1*
+#1050
+0*
+#1055
+1*
+#1060
+0*
+#1065
+1*
+#1070
+0*
+#1075
+1*
+#1080
+0*
+#1085
+1*
+#1090
+0*
+#1095
+1*
+#1100
+0*
+#1105
+1*
+#1110
+0*
+#1115
+1*
+#1120
+0*
+#1125
+1*
+#1130
+0*
+#1135
+1*
+#1140
+0*
+#1145
+1*
+#1150
+0*
+#1155
+1*
+#1160
+0*
+#1165
+1*
+#1170
+0*
+#1175
+1*
+#1180
+0*
+#1185
+1*
+#1190
+0*
+#1195
+1*
+#1200
+0*
+#1205
+1*
+#1210
+0*
+#1215
+1*
+#1220
+0*
+#1225
+1*
+#1230
+0*
+#1235
+1*
+#1240
+0*
+#1245
+1*
